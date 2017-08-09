@@ -76,11 +76,6 @@ Script.prototype.runInContext = function (context) {
     forEach(Object_keys(context), function (key) {
         win[key] = context[key];
     });
-    forEach(globals, function (key) {
-        if (context[key]) {
-            win[key] = context[key];
-        }
-    });
     
     var winKeys = Object_keys(win);
 
